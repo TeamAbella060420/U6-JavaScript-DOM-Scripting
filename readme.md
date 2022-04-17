@@ -6,3 +6,4 @@
 4. Removing Names - What if users make a mistake and want to remove a name? Let's add a button to each list item to delete it. We'll also move to a delegated click handler, to allow us to set one handler for all buttons.
 5. Moving to an Editing State - we added an 'edit' button to our list items. Now we'll need to manipulate the DOM when the 'edit' buttons are clicked to get to an editing state.
 6. Saving Names -  moving list items to a saved state when the save button was clicked. 
+7. Filter Invitees Who Have Not Responded - add a new feature: filtering out guests who have yet to respond. This will enable our users to see the current guest list at a glance. Unlike the previous features we've implemented, we'll add this one to the page dynamically. In other words, we'll create and insert all the new elements we need to the DOM. Then we'll attach behavior to those elements, all with JavaScript.
