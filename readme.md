@@ -5,3 +5,4 @@
 3. RSVP Checkbox - Let's allow users to mark off when guests respond that they intend to come to the party.
 4. Removing Names - What if users make a mistake and want to remove a name? Let's add a button to each list item to delete it. We'll also move to a delegated click handler, to allow us to set one handler for all buttons.
 5. Moving to an Editing State - we added an 'edit' button to our list items. Now we'll need to manipulate the DOM when the 'edit' buttons are clicked to get to an editing state.
+6. Saving Names -  moving list items to a saved state when the save button was clicked. 
