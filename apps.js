@@ -105,11 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       if (button.textContent === 'remove') {
-        removeName();
+        nameAction.remove();
       } else if (button.textContent === 'edit') { 
-        editName();
+        nameAction.edit();
       } else if (button.textContent === 'save') { 
-        saveName();
+        nameAction.save();
       }
     }
   });  
