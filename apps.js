@@ -4,7 +4,9 @@ const ul = document.getElementById('invitedList');
 
 function createLI(text) {
         const li = document.createElement('li');
-        li.textContent = text;
+        const span = document.createElement('span');
+        span.textContent = text;
+        li.appendChild(span);
         const label = document.createElement('label');
         label.textContent = 'Confirmed';
         const checkbox = document.createElement('input');
@@ -50,6 +52,13 @@ ul.addEventListener('click', (e) => {
         if (button.tagName === 'remove'){
         ul.removeChild(li);
     } else if (button.tagName === 'edit');
+        const span = li.firstElementChild;
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.value = span.textContent;
+        li.insertBefore(input, span);
+        li.removeChild(span);
+        button.textContent = 'save';
     }
 });
 
