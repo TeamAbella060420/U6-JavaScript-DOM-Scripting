@@ -48,16 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
     const li = document.createElement('li');
-
     appendtoLI('span', 'textContent', text);    
-
     appendtoLI('label', 'textContent', 'Confirmed')
       .appendChild(createElement('input', 'type', 'checkbox'));
-
-
     appendtoLI('button', 'textContent', 'edit'); 
     appendtoLI('button', 'textContent', 'remove');
-
     return li;
   }
 
