@@ -41,9 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return element;
       }
 
+      function appendtoLI(elementName, property, value) {
+        const element = createElement(elementName, property, value);    
+        li.appendChild(element);
+      }
+
     const li = document.createElement('li');
 
-    const span = createElement('span', 'textContent', text);    
+    appendtoLI('span', 'textContent', text);    
     li.appendChild(span);
 
     const label = document.createElement('label', 'textContent', 'Confirmed');
@@ -57,11 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     li.appendChild(editButton);
 
-    const removeButton = document.createElement('button');
-    removeButton.textContent = 'remove';
+    const removeButton = createElement('button', 'textContent', 'remove');
 
     li.appendChild(removeButton);
-
     return li;
   }
 
