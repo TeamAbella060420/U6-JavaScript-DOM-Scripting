@@ -11,9 +11,14 @@ function createLI(text) {
         checkbox.type = 'checkbox';
         label.appendChild(checkbox);
         li.appendChild(label)
-        const button = document.createElement('button');
-        button.textContent = 'remove';
-        li.appendChild(button);
+
+        const editbutton = document.createElement('button');
+        editbutton.textContent = 'edit';
+        li.appendChild(editbutton);
+
+        const removebutton = document.createElement('button');
+        removebutton.textContent = 'remove';
+        li.appendChild(removebutton);
         return li;
 }
 
@@ -37,11 +42,14 @@ ul.addEventListener('change', (e) => {
     }
 });
 
-ul.addEventListener('click', (e) => {
+ul.addEventListener('click', (e) => {   
     if (e.target.tagName === 'BUTTON') {
-        const li = e.target.parentNode;
+        const button = e.target;
+        const li = button.parentNode;
         const ul = li.parentNode;
+        if (button.tagName === 'remove'){
         ul.removeChild(li);
+    } else if (button.tagName === 'edit');
     }
 });
 
