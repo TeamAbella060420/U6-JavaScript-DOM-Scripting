@@ -93,17 +93,21 @@ document.addEventListener('DOMContentLoaded', () => {
         li.removeChild(span);
         button.textContent = 'save';
       }
-      if (button.textContent === 'remove') {
-        removeName();
-      } else if (button.textContent === 'edit') { 
-
-      } else if (button.textContent === 'save') { 
+      function saveName() {
         const input = li.firstElementChild;
         const span = document.createElement('span');
         span.textContent = input.value;
         li.insertBefore(span, input);
         li.removeChild(input);
         button.textContent = 'edit';
+      }
+
+      if (button.textContent === 'remove') {
+        removeName();
+      } else if (button.textContent === 'edit') { 
+
+      } else if (button.textContent === 'save') { 
+
       }
     }
   });  
