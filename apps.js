@@ -43,8 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const li = document.createElement('li');
 
-    const span = createElement('span', 'textContent', text);  
-    span.textContent = text;
+    const span = createElement('span', 'textContent', text);    
 
     li.appendChild(span);
 
