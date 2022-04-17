@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
 
+      // Select and run action in button's name.
       nameAction[action]();
     }
   });  
