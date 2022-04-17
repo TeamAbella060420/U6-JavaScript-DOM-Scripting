@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const label = document.createElement('label');
 
     label.textContent = 'Confirmed';
-    const checkbox = document.createElement('input');
+    const checkbox = document.createElement('label', 'textContent', 'Confirmed');
 
     checkbox.type = 'checkbox';
 
