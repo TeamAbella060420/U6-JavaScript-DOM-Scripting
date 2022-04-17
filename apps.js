@@ -35,22 +35,39 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function createLI(text) {
+      function createElement(elementName, property, value) {
+        const element = document.createElement(elementName);  
+        element[property] = value;
+        return element;
+      }
+
     const li = document.createElement('li');
-    const span = document.createElement('span');  
+
+    const span = createElement('span', 'textContent', text);  
     span.textContent = text;
+
     li.appendChild(span);
+
     const label = document.createElement('label');
+
     label.textContent = 'Confirmed';
     const checkbox = document.createElement('input');
+
     checkbox.type = 'checkbox';
+
     label.appendChild(checkbox);
     li.appendChild(label);  
+
     const editButton = document.createElement('button');
     editButton.textContent = 'edit';
+
     li.appendChild(editButton);
+
     const removeButton = document.createElement('button');
     removeButton.textContent = 'remove';
+
     li.appendChild(removeButton);
+
     return li;
   }
 
