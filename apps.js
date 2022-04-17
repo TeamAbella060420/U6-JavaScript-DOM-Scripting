@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const button = e.target;
       const li = button.parentNode;
       const ul = li.parentNode;
+      const action = button.textContent;
       const nameAction = {
         remove: () => {
           ul.removeChild(li);
@@ -104,13 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
 
-      if (button.textContent === 'remove') {
-        nameAction.remove();
-      } else if (button.textContent === 'edit') { 
-        nameAction.edit();
-      } else if (button.textContent === 'save') { 
-        nameAction.save();
-      }
+      nameAction[action]();
     }
   });  
 
