@@ -51,7 +51,7 @@ ul.addEventListener('click', (e) => {
         const ul = li.parentNode;
         if (button.tagName === 'remove'){
         ul.removeChild(li);
-    } else if (button.tagName === 'edit');
+    } else if (button.tagName === 'save');
         const span = li.firstElementChild;
         const input = document.createElement('input');
         input.type = 'text';
