@@ -6,10 +6,8 @@ form.addEventListener('submit', (e) => {
         e.preventDefault();
         const text = input.value;
         input.value = '';
-
         const li = document.createElement('li');
         li.textContent = text;
-
         const label = document.createElement('label');
         label.textContent = 'Confirmed';
         const checkbox = document.createElement('input');
