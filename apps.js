@@ -44,21 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const li = document.createElement('li');
 
     const span = createElement('span', 'textContent', text);    
-
     li.appendChild(span);
 
-    const label = document.createElement('label');
+    const label = document.createElement('label', 'textContent', 'Confirmed');
 
-    label.textContent = 'Confirmed';
-    const checkbox = document.createElement('label', 'textContent', 'Confirmed');
-
-    checkbox.type = 'checkbox';
+    const checkbox = document.createElement('input', 'type', 'checkbox');
 
     label.appendChild(checkbox);
     li.appendChild(label);  
 
-    const editButton = document.createElement('button');
-    editButton.textContent = 'edit';
+    const editButton = createElement('button', 'textContent', 'edit');  
 
     li.appendChild(editButton);
 
